@@ -1,2 +1,3 @@
-# instant-exchange
-This program is meant to be run in 2 instances. It can send text to each other and receive it in real time, using UDP on localhost. 
+The instances rely on a Serializable file of PortNumbers class (defined in the program) to communicate their port numbers to each other, by creating the file to establish a port number reservation system, deserializing to confirm that a user chosen port number that is prompted at startup time isn't taken, and serializing to reserve an untaken port number. If the program terminates normally, it'll deserialize and serialize to remove its reservation, but if not, then the shutdown hook that was defined by a method invoked from Java's Runtime package will automatically deserialize and serialize to remove its reservation.
+
+PortNumbers consist of 4 data members. 2 to hold reserved port numbers, and the others to flag 
