@@ -1,1 +1,1 @@
-
+Run each program. Then specify a valid UDP port number (the program will re-prompt if its invalid), and start sending and receiving messages if another instance of the program is running and has specified a UDP port number.
